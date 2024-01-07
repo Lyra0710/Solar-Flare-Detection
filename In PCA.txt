@@ -1,0 +1,13 @@
+In PCA:
+
+The scree plot displays the eigenvalues of each principal component, where each eigenvalue represents the amount of variance explained by that particular component.
+The plot typically shows these eigenvalues against the number of components, often starting from the first component to the last.
+In Factor Analysis:
+
+In factor analysis, the scree plot shows the variance or eigenvalues of factors.
+It helps in deciding how many factors to keep based on their relative significance in explaining the variance observed in the data.
+The main purpose of a scree plot is to identify the point at which adding more components/factors stops significantly contributing to the explanation of variance. The plot shows an "elbow" or a point where the eigenvalues start to level off, indicating that additional components/factors might not explain much more variance than the existing ones.
+
+Researchers often use this plot to determine a suitable number of components/factors to retain in their analysis. The point where the eigenvalues level off or the slope becomes less steep can be chosen as a cutoff for selecting the optimal number of components/factors.
+
+It's a visual aid that helps in making informed decisions about dimensionality reduction, ensuring a balance between capturing enough variance in the data while avoiding overfitting or capturing noise.
