@@ -5,3 +5,4 @@ raw_data
 model_3h.ipynb
 model_realTime.ipynb
 output.txt
+.gitignore
