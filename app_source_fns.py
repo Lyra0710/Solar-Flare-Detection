@@ -1,6 +1,8 @@
 import pandas as pd
-import tensorflow as tf
+# import tensorflow as tf
+from keras.models import load_model
 from datetime import datetime, timedelta
+import os
 
 
 def classify_storm_level(value):
@@ -74,9 +76,12 @@ def get_table(start_date, end_date, dates_df, final_df, loaded_model):
     
 
 def process(start_date, end_date):
+    # Set current working directory as file's directory
+    os.chdir(os.path.dirname(__file__))
     dates_df = pd.read_pickle("data/dates_df2").iloc[:, 4]
     final_df = pd.read_pickle("data/final_df").iloc[:,4]
-    loaded_model = tf.keras.models.load_model("chekpoint_models/1d_output_model")
+    # loaded_model = tf.keras.models.load_model("chekpoint_models/1d_output_model")
+    loaded_model = load_model("./chekpoint_models/1d_output_model_new.keras")
 
     # Prepare dates_df if needed
     last_date = dates_df.tail(1).item()
